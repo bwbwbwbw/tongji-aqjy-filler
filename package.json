@@ -1,8 +1,8 @@
 {
     "name":"tongji-aqjy-filler",
-    "dependencies":[
+    "dependencies":{
         "jquery":"*",
         "iconv":"*",
         "request":"*"
-    ]
+    }
 }
