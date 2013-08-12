@@ -1,0 +1,26 @@
+{
+    "description": "Automatically complete the answer of Tongji University Lab Safety Education Exam",
+    "name": "Tongji AQJY Filler",
+    "icons": { 
+        "16": "vendor/icon16.png",
+        "48": "vendor/icon48.png",
+        "128": "vendor/icon128.png",
+        "256": "vendor/icon256.png"
+    },
+    "page_action": {
+        "default_icon": "vendor/icon19.png",
+        "default_title": "Tongji AQJY Filler"
+    },
+    "content_scripts": [{ 
+        "js": ["vendor/jQuery.js", "vendor/content.js"],
+        "matches": ["http://aqjy.tongji.edu.cn/shs/examOnline.do*", "http://aqjy.tongji.edu.cn/shs/exameEmployee.do*"],
+        "run_at": "document_end",
+        "all_frames": true
+    }],
+    "background": {
+        "scripts": ["vendor/background.js"]
+    },
+    "permissions": ["tabs", "http://aqjy.tongji.edu.cn/*"],
+    "manifest_version": 2,
+    "version": "1.0"
+}
